@@ -1,0 +1,9 @@
+Akun Admin :
+
+1.User 	  : yusuf123
+  Password: yusuf123
+
+Akun Member :
+
+1.User 	  : dhimas123 
+  Password: dhimas123
