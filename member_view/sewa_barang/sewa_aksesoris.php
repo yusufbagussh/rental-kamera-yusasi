@@ -111,8 +111,8 @@ $tanggal = date("Y-m-d H:i:s");
 											<input type="text" class="form-control" name="nama_member" id="nama_member" required>
 										</div>
 										<div class="mb-3">
-											<label for="id_penyewa" class="form-label">ID Penyewa</label>
-											<input type="text" class="form-control" name="id_member" id="id_penyewa" required>
+											<label for="id_member" class="form-label">ID Penyewa</label>
+											<input type="text" class="form-control" name="id_member" id="id_member" required>
 										</div>
 										<div class="mb-3">
 											<label for="nama_barang" class="form-label">Nama Barang</label>

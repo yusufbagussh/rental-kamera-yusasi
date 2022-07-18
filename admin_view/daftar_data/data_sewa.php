@@ -112,7 +112,7 @@ if (isset($_POST["cari"])) {
                                             <tr>
                                                 <td><?= $i; ?></td>
                                                 <td><?= $row['nama_member'] ?></td>
-                                                <td><?= $row['id_penyewa'] ?></td>
+                                                <td><?= $row['id_member'] ?></td>
                                                 <td><?= $row['nama_barang'] ?></td>
                                                 <td><?= $row['id_barang'] ?></td>
                                                 <td><?= $row['harga_sewa'] ?></td>
