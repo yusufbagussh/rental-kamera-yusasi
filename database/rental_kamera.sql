@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 09, 2022 at 09:34 AM
+-- Generation Time: Jul 18, 2022 at 12:01 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 8.1.7
 
@@ -45,7 +45,8 @@ CREATE TABLE `tb_anggota` (
 
 INSERT INTO `tb_anggota` (`id`, `nama`, `tempat_tanggal_lahir`, `jenis_kelamin`, `alamat`, `email`, `no_hp`, `gambar`, `akun`) VALUES
 (1, 'Umar Syaifullah', '2022-07-09', 'laki - laki', 'Wonogiri', 'fullo@gmail.com', '089670198915', '62c9342805a51.png', '1'),
-(2, 'Yusuf Bagus Sungging Herlambang', '2022-07-09', 'laki - laki', 'Sukoharjo', 'bagus@gmail.com', '089670198915', '62c9496121785.jpg', '2');
+(2, 'Yusuf Bagus Sungging Herlambang', '2022-07-09', 'laki - laki', 'Sukoharjo', 'bagus@gmail.com', '089670198915', '62c9496121785.jpg', '2'),
+(3, 'Dhimas Risang Maulana', '2022-07-18', 'laki - laki', 'Grogol', 'dhimas@gmail.com', '089670198915', '62d545f8a2801.png', '3');
 
 -- --------------------------------------------------------
 
@@ -117,7 +118,7 @@ INSERT INTO `tb_produk` (`id`, `nama_barang`, `harga`, `keterangan`, `gambar`, `
 CREATE TABLE `tb_sewa` (
   `id` int(11) NOT NULL,
   `nama_member` varchar(100) NOT NULL,
-  `id_penyewa` int(11) NOT NULL,
+  `id_member` int(11) NOT NULL,
   `nama_barang` varchar(100) NOT NULL,
   `id_barang` int(11) NOT NULL,
   `harga_sewa` varchar(100) NOT NULL,
@@ -134,8 +135,10 @@ CREATE TABLE `tb_sewa` (
 -- Dumping data for table `tb_sewa`
 --
 
-INSERT INTO `tb_sewa` (`id`, `nama_member`, `id_penyewa`, `nama_barang`, `id_barang`, `harga_sewa`, `lama_sewa`, `jumlah`, `tanggal_sewa`, `alamat`, `pembayaran`, `pengiriman`, `total_biaya`) VALUES
-(1, 'Umar Syaifullah', 1, 'Beholder DS1', 22, '200000', '2', '3', '2022-07-09 15:56:52', 'Wonogiri', 'Via Cash', 'Barang Ambil Sendiri', '1200000');
+INSERT INTO `tb_sewa` (`id`, `nama_member`, `id_member`, `nama_barang`, `id_barang`, `harga_sewa`, `lama_sewa`, `jumlah`, `tanggal_sewa`, `alamat`, `pembayaran`, `pengiriman`, `total_biaya`) VALUES
+(1, 'Umar Syaifullah', 1, 'Beholder DS1', 22, '200000', '2', '3', '2022-07-09 15:56:52', 'Wonogiri', 'Via Cash', 'Barang Ambil Sendiri', '1200000'),
+(2, 'Dhimas Risang Maulana', 3, 'Kamera Canon 1100D', 1, '100000', '2', '3', '2022-07-18 18:37:46', 'Grogol', 'Via Cash', 'Barang Ambil Sendiri', '600000'),
+(3, 'Dhimas Risang Maulana', 3, 'Kamera Nikon D90', 2, '200000', '2', '3', '2022-07-18 18:58:32', 'Grogol', 'Via Cash', 'Barang Ambil Sendiri', '1200000');
 
 -- --------------------------------------------------------
 
@@ -157,7 +160,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `nama_lengkap`, `username`, `password`, `level`) VALUES
 (1, 'Umar Syaifullah', 'umarsyaifullah', '$2y$10$4zUjXWXJV8BoVYZMlAMg3u2Oqb7hIMUBItkhCAk.F7z/CphpjhR56', 'member'),
-(2, 'Yusuf Bagus Sungging Herlambang', 'yusufbagus', '$2y$10$5OYvVPw9Mmaq62R4fOJTcuBUsQR1LRleiyjcSLRXgKayp0YYBI5FC', 'admin');
+(2, 'Yusuf Bagus Sungging Herlambang', 'yusufbagus', '$2y$10$5OYvVPw9Mmaq62R4fOJTcuBUsQR1LRleiyjcSLRXgKayp0YYBI5FC', 'admin'),
+(3, 'Dhimas Risang Maulana', 'dhimasrisang', '$2y$10$Y8tctb/csRDQdHvzxkhqgu4HcxZOkFuD3y8JdMBY9q78Ns/X5KrG.', 'member');
 
 --
 -- Indexes for dumped tables
@@ -201,7 +205,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `tb_anggota`
 --
 ALTER TABLE `tb_anggota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_jenis_barang`
@@ -219,13 +223,13 @@ ALTER TABLE `tb_produk`
 -- AUTO_INCREMENT for table `tb_sewa`
 --
 ALTER TABLE `tb_sewa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
