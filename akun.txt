@@ -1,0 +1,7 @@
+Member
+username : dhimasrisang
+password : dhimas123
+
+Admin
+username : yusufbagus
+password : yusuf123

@@ -167,8 +167,8 @@ $tanggal = date("Y-m-d H:i:s");
 						</div>
 					</div>
 				</div>
+			</main>
 		</div>
-		</main>
 	</div>
 	<div id="layoutAuthentication_footer">
 		<footer class="py-4 bg-dark mt-auto">
